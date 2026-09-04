@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+:root, [data-theme="dark+"] {
+  /* VS Code Dark+ */
+  --theme-editor-bg: #1e1e1e;
+  --theme-editor-fg: #d4d4d4;
+  --theme-sidebar-bg: #252526;
+  --theme-activitybar-bg: #333333;
+  --theme-activitybar-fg: #858585;
+  --theme-activitybar-active: #ffffff;
+  --theme-titlebar-bg: #323233;
+  --theme-tab-active-bg: #1e1e1e;
+  --theme-tab-inactive-bg: #2d2d2d;
+  --theme-tab-border: #252526;
+  --theme-border: #3e3e42;
+  --theme-border-subtle: #2d2d2d;
+  --theme-statusbar-bg: #007acc;
+  --theme-statusbar-fg: #ffffff;
+  --theme-terminal-bg: #1a1a1a;
+  --theme-terminal-fg: #cccccc;
+  --theme-line-number: #5a5a5a;
+  --theme-selection: #264f78;
+  --theme-hover: #2a2d2e;
+  --theme-focus: #007fd4;
+  --theme-scrollbar: #424242;
+  --theme-scrollbar-hover: #4f4f4f;
+  --theme-badge: #4d78cc;
+  --theme-input-bg: #3c3c3c;
+  --theme-input-border: #3c3c3c;
+  --theme-dropdown-bg: #252526;
+  --theme-minimap-bg: #1e1e1e;
+
+  /* Syntax */
+  --theme-syntax-keyword: #569cd6;
+  --theme-syntax-string: #ce9178;
+  --theme-syntax-number: #b5cea8;
+  --theme-syntax-function: #dcdcaa;
+  --theme-syntax-type: #4ec9b0;
+  --theme-syntax-variable: #9cdcfe;
+  --theme-syntax-comment: #6a9955;
+  --theme-syntax-operator: #d4d4d4;
+  --theme-syntax-punctuation: #808080;
+  --theme-syntax-property: #9cdcfe;
+  --theme-syntax-constant: #4fc1ff;
+  --theme-syntax-tag: #569cd6;
+
+  /* Accent */
+  --theme-accent: #007acc;
+  --theme-accent-hover: #1a8ad4;
+  --theme-success: #4ec9b0;
+  --theme-warning: #cca700;
+  --theme-error: #f14c4c;
+  --theme-info: #3794ff;
+}
+
+[data-theme="light+"] {
+  /* VS Code Light+ */
+  --theme-editor-bg: #ffffff;
+  --theme-editor-fg: #000000;
+  --theme-sidebar-bg: #f3f3f3;
+  --theme-activitybar-bg: #2c2c2c;
+  --theme-activitybar-fg: #858585;
+  --theme-activitybar-active: #ffffff;
+  --theme-titlebar-bg: #dddddd;
+  --theme-tab-active-bg: #ffffff;
+  --theme-tab-inactive-bg: #ececec;
+  --theme-tab-border: #f3f3f3;
+  --theme-border: #cccccc;
+  --theme-border-subtle: #e4e4e4;
+  --theme-statusbar-bg: #007acc;
+  --theme-statusbar-fg: #ffffff;
+  --theme-terminal-bg: #f8f8f8;
+  --theme-terminal-fg: #333333;
+  --theme-line-number: #237893;
+  --theme-selection: #add6ff;
+  --theme-hover: #e8e8e8;
+  --theme-focus: #0090f1;
+  --theme-scrollbar: #c1c1c1;
+  --theme-scrollbar-hover: #a8a8a8;
+  --theme-badge: #007acc;
+  --theme-input-bg: #ffffff;
+  --theme-input-border: #cecece;
+  --theme-dropdown-bg: #f3f3f3;
+  --theme-minimap-bg: #f3f3f3;
+
+  /* Syntax */
+  --theme-syntax-keyword: #0000ff;
+  --theme-syntax-string: #a31515;
+  --theme-syntax-number: #098658;
+  --theme-syntax-function: #795e26;
+  --theme-syntax-type: #267f99;
+  --theme-syntax-variable: #001080;
+  --theme-syntax-comment: #008000;
+  --theme-syntax-operator: #000000;
+  --theme-syntax-punctuation: #000000;
+  --theme-syntax-property: #001080;
+  --theme-syntax-constant: #0000ff;
+  --theme-syntax-tag: #800000;
+
+  /* Accent */
+  --theme-accent: #007acc;
+  --theme-accent-hover: #005a9e;
+  --theme-success: #098658;
+  --theme-warning: #cd9731;
+  --theme-error: #e51400;
+  --theme-info: #1a85ff;
+}
+
+[data-theme="monokai"] {
+  /* Monokai */
+  --theme-editor-bg: #272822;
+  --theme-editor-fg: #f8f8f2;
+  --theme-sidebar-bg: #1e1f1c;
+  --theme-activitybar-bg: #272822;
+  --theme-activitybar-fg: #75715e;
+  --theme-activitybar-active: #ffffff;
+  --theme-titlebar-bg: #1e1f1c;
+  --theme-tab-active-bg: #272822;
+  --theme-tab-inactive-bg: #1e1f1c;
+  --theme-tab-border: #1e1f1c;
+  --theme-border: #414339;
+  --theme-border-subtle: #31322c;
+  --theme-statusbar-bg: #f92672;
+  --theme-statusbar-fg: #ffffff;
+  --theme-terminal-bg: #1e1f1c;
+  --theme-terminal-fg: #f8f8f2;
+  --theme-line-number: #90908a;
+  --theme-selection: #49483e;
+  --theme-hover: #3e3d32;
+  --theme-focus: #fd971f;
+  --theme-scrollbar: #414339;
+  --theme-scrollbar-hover: #75715e;
+  --theme-badge: #fd971f;
+  --theme-input-bg: #1e1f1c;
+  --theme-input-border: #414339;
+  --theme-dropdown-bg: #1e1f1c;
+  --theme-minimap-bg: #272822;
+
+  /* Syntax */
+  --theme-syntax-keyword: #f92672;
+  --theme-syntax-string: #e6db74;
+  --theme-syntax-number: #ae81ff;
+  --theme-syntax-function: #a6e22e;
+  --theme-syntax-type: #66d9ef;
+  --theme-syntax-variable: #f8f8f2;
+  --theme-syntax-comment: #75715e;
+  --theme-syntax-operator: #f92672;
+  --theme-syntax-punctuation: #f8f8f2;
+  --theme-syntax-property: #a6e22e;
+  --theme-syntax-constant: #ae81ff;
+  --theme-syntax-tag: #f92672;
+
+  /* Accent */
+  --theme-accent: #fd971f;
+  --theme-accent-hover: #e28212;
+  --theme-success: #a6e22e;
+  --theme-warning: #e6db74;
+  --theme-error: #f92672;
+  --theme-info: #66d9ef;
+}
+
+[data-theme="github-dark"] {
+  /* GitHub Dark */
+  --theme-editor-bg: #0d1117;
+  --theme-editor-fg: #c9d1d9;
+  --theme-sidebar-bg: #161b22;
+  --theme-activitybar-bg: #21262d;
+  --theme-activitybar-fg: #8b949e;
+  --theme-activitybar-active: #c9d1d9;
+  --theme-titlebar-bg: #161b22;
+  --theme-tab-active-bg: #0d1117;
+  --theme-tab-inactive-bg: #161b22;
+  --theme-tab-border: #30363d;
+  --theme-border: #30363d;
+  --theme-border-subtle: #21262d;
+  --theme-statusbar-bg: #238636;
+  --theme-statusbar-fg: #ffffff;
+  --theme-terminal-bg: #0d1117;
+  --theme-terminal-fg: #c9d1d9;
+  --theme-line-number: #6e7681;
+  --theme-selection: #264f78;
+  --theme-hover: #21262d;
+  --theme-focus: #58a6ff;
+  --theme-scrollbar: #30363d;
+  --theme-scrollbar-hover: #484f58;
+  --theme-badge: #1f6feb;
+  --theme-input-bg: #0d1117;
+  --theme-input-border: #30363d;
+  --theme-dropdown-bg: #161b22;
+  --theme-minimap-bg: #0d1117;
+
+  /* Syntax */
+  --theme-syntax-keyword: #ff7b72;
+  --theme-syntax-string: #a5d6ff;
+  --theme-syntax-number: #79c0ff;
+  --theme-syntax-function: #d2a8ff;
+  --theme-syntax-type: #ff7b72;
+  --theme-syntax-variable: #c9d1d9;
+  --theme-syntax-comment: #8b949e;
+  --theme-syntax-operator: #c9d1d9;
+  --theme-syntax-punctuation: #c9d1d9;
+  --theme-syntax-property: #79c0ff;
+  --theme-syntax-constant: #79c0ff;
+  --theme-syntax-tag: #7ee787;
+
+  /* Accent */
+  --theme-accent: #58a6ff;
+  --theme-accent-hover: #3182ce;
+  --theme-success: #238636;
+  --theme-warning: #d29922;
+  --theme-error: #da3633;
+  --theme-info: #58a6ff;
+}
+
+@theme {
+  /* VS Code-inspired color palette mapping */
+  --color-editor-bg: var(--theme-editor-bg);
+  --color-editor-fg: var(--theme-editor-fg);
+  --color-sidebar-bg: var(--theme-sidebar-bg);
+  --color-activitybar-bg: var(--theme-activitybar-bg);
+  --color-activitybar-fg: var(--theme-activitybar-fg);
+  --color-activitybar-active: var(--theme-activitybar-active);
+  --color-titlebar-bg: var(--theme-titlebar-bg);
+  --color-tab-active-bg: var(--theme-tab-active-bg);
+  --color-tab-inactive-bg: var(--theme-tab-inactive-bg);
+  --color-tab-border: var(--theme-tab-border);
+  --color-border: var(--theme-border);
+  --color-border-subtle: var(--theme-border-subtle);
+  --color-statusbar-bg: var(--theme-statusbar-bg);
+  --color-statusbar-fg: var(--theme-statusbar-fg);
+  --color-terminal-bg: var(--theme-terminal-bg);
+  --color-terminal-fg: var(--theme-terminal-fg);
+  --color-line-number: var(--theme-line-number);
+  --color-selection: var(--theme-selection);
+  --color-hover: var(--theme-hover);
+  --color-focus: var(--theme-focus);
+  --color-scrollbar: var(--theme-scrollbar);
+  --color-scrollbar-hover: var(--theme-scrollbar-hover);
+  --color-badge: var(--theme-badge);
+  --color-input-bg: var(--theme-input-bg);
+  --color-input-border: var(--theme-input-border);
+  --color-dropdown-bg: var(--theme-dropdown-bg);
+  --color-minimap-bg: var(--theme-minimap-bg);
+
+  /* Syntax highlighting colors mapping */
+  --color-syntax-keyword: var(--theme-syntax-keyword);
+  --color-syntax-string: var(--theme-syntax-string);
+  --color-syntax-number: var(--theme-syntax-number);
+  --color-syntax-function: var(--theme-syntax-function);
+  --color-syntax-type: var(--theme-syntax-type);
+  --color-syntax-variable: var(--theme-syntax-variable);
+  --color-syntax-comment: var(--theme-syntax-comment);
+  --color-syntax-operator: var(--theme-syntax-operator);
+  --color-syntax-punctuation: var(--theme-syntax-punctuation);
+  --color-syntax-property: var(--theme-syntax-property);
+  --color-syntax-constant: var(--theme-syntax-constant);
+  --color-syntax-tag: var(--theme-syntax-tag);
+
+  /* Brand/accent colors mapping */
+  --color-accent: var(--theme-accent);
+  --color-accent-hover: var(--theme-accent-hover);
+  --color-success: var(--theme-success);
+  --color-warning: var(--theme-warning);
+  --color-error: var(--theme-error);
+  --color-info: var(--theme-info);
+
+  /* Fonts */
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--color-editor-bg);
+    color: var(--color-editor-fg);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-selection);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-scrollbar-hover);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+  }
+}
+
+@layer components {
+  .vscode-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 2px;
+    font-size: 13px;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.1s, border-color 0.1s;
+  }
+
+  .vscode-btn-primary {
+    background-color: var(--color-accent);
+    color: #fff;
+    &:hover {
+      background-color: var(--color-accent-hover);
+      text-decoration: none;
+    }
+  }
+
+  .vscode-btn-secondary {
+    background-color: transparent;
+    color: var(--color-editor-fg);
+    border-color: var(--color-border);
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+}
+
