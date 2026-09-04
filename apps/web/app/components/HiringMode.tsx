@@ -3,7 +3,7 @@
 import { useIDE } from "../context/IDEContext";
 import { profile, experience, projects, skills, education } from "../data/portfolio";
 import { Mail, FileText, Code, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 function GithubIcon({ size = 16 }: { size?: number }) {
   return (
@@ -21,7 +21,7 @@ function LinkedinIcon({ size = 16 }: { size?: number }) {
   );
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -29,7 +29,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
 };
@@ -67,7 +67,7 @@ export default function HiringMode() {
               {profile.name}
             </h1>
             <h2 className="text-xl md:text-2xl text-accent font-medium mb-6">
-              {profile.title}
+              {profile.role}
             </h2>
             <p className="text-base text-activitybar-fg leading-relaxed mb-10 max-w-xl mx-auto">
               {profile.tagline}
@@ -153,9 +153,9 @@ export default function HiringMode() {
                 >
                   <div className="flex justify-between items-start mb-4">
                     <h4 className="text-xl font-bold text-editor-fg group-hover:text-accent transition-colors">{proj.name}</h4>
-                    {proj.link && (
+                    {(proj as any).link && (
                       <a
-                        href={proj.link}
+                        href={(proj as any).link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 text-activitybar-fg hover:text-accent hover:bg-accent/10 rounded-full transition-colors"
@@ -240,7 +240,7 @@ export default function HiringMode() {
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2 gap-2 sm:gap-0">
                       <h4 className="text-lg font-bold text-editor-fg">{edu.degree}</h4>
                       <span className="text-[13px] text-activitybar-fg font-medium bg-input-bg/50 px-3 py-1 rounded-full w-fit">
-                        {edu.period || edu.year}
+                        {edu.period}
                       </span>
                     </div>
                     <div className="text-[15px] text-activitybar-active mb-3">{edu.institution}</div>
