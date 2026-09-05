@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { useIDE } from "../context/IDEContext";
 import ActivityBar from "./ActivityBar";
 import Sidebar from "./Sidebar";
@@ -38,12 +39,12 @@ export default function IDEShell() {
       {/* Title bar */}
       <div className="hidden md:flex items-center h-8 px-3 bg-titlebar-bg border-b border-border select-none flex-shrink-0">
         <div className="flex-1 flex items-center">
-          <button
-            onClick={() => setHiringMode(true)}
+          <Link
+            href="/"
             className="text-[11px] text-activitybar-fg hover:text-editor-fg bg-transparent hover:bg-hover px-2 py-0.5 rounded transition-colors"
           >
-            Hiring Mode
-          </button>
+            ← Hiring Mode
+          </Link>
         </div>
         <div className="flex-1 text-center text-[12px] text-activitybar-fg font-sans">
           Ayush Raj Yadav — Portfolio IDE

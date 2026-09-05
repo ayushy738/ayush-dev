@@ -195,6 +195,7 @@ export const profile = {
     github: "https://github.com/ayushy738",
     linkedin: "https://linkedin.com/in/ayush-raj-yadav-393732326",
     codeforces: "https://codeforces.com/profile/a4ayushyadav2007",
+    leetcode: "https://leetcode.com/u/ayush_738/",
   },
   currently: [
     { role: "Software Developer Intern", org: "Eduteria" },
